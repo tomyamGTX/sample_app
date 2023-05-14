@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
@@ -49,33 +50,35 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
       onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF14181B),
+        backgroundColor: const Color(0xFF14181B),
         body: Container(
           width: double.infinity,
           height: MediaQuery.of(context).size.height * 1,
           child: Stack(
             children: [
               PageView(
-                controller: pageViewController ??=
-                    PageController(initialPage: 0),
+                controller: pageViewController,
                 scrollDirection: Axis.horizontal,
                 children: [
                   Container(
                     width: MediaQuery.of(context).size.width * 0.807,
                     height: MediaQuery.of(context).size.height * 1,
                     decoration: BoxDecoration(
-                      color: Color(0xFF14181B),
+                      color: const Color(0xFF14181B),
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: Image.asset(
-                          'assets/images/124383.jpg',
+                          'assets/images/logo-color.png',
+                          errorBuilder: (context, a, b) {
+                            return const Icon(Icons.error);
+                          },
                         ).image,
                       ),
                     ),
                     child: Container(
                       width: 100,
                       height: MediaQuery.of(context).size.height * 1,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0x990F1113),
                       ),
                       child: Column(
@@ -83,8 +86,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 0, 0, 30),
                             child: Container(
                               width: 300,
                               height: 300,
@@ -94,19 +97,22 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
                                   image: Image.asset(
-                                    'assets/images/ezgif-5-616e661008.jpg',
+                                    'assets/images/logo-color.png',
+                                    errorBuilder: (context, a, b) {
+                                      return const Icon(Icons.error);
+                                    },
                                   ).image,
                                 ),
                                 shape: BoxShape.circle,
                                 border: Border.all(
-                                  color: Color(0xFF00FF4B),
+                                  color: const Color(0xFF00FF4B),
                                 ),
                               ),
                             ),
                           ),
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 0, 0, 30),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -126,16 +132,17 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                             ),
                           ),
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 180),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 0, 0, 180),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 100),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 0, 100),
                                     child: Text(
                                       'Lets Discover Some new thing\'s \nand interesting informations about Histories.',
                                       textAlign: TextAlign.center,
@@ -161,30 +168,34 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height * 1,
                     decoration: BoxDecoration(
-                      color: Color(0xFF14181B),
+                      color: const Color(0xFF14181B),
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: Image.asset(
-                          'assets/images/124383.jpg',
+                          'assets/images/logo-color.png',
+                          errorBuilder: (context, a, b) {
+                            return const Icon(Icons.error);
+                          },
                         ).image,
                       ),
                     ),
                     child: Container(
                       width: 100,
                       height: MediaQuery.of(context).size.height * 1,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0x990F1113),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 20, 0, 0),
                               child: Container(
                                 width: 300,
                                 height: 300,
@@ -194,7 +205,10 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
                                     image: Image.asset(
-                                      'assets/images/pngtree-books-logo-image_79143.jpg',
+                                      'assets/images/logo-color.png',
+                                      errorBuilder: (context, a, b) {
+                                        return const Icon(Icons.error);
+                                      },
                                     ).image,
                                   ),
                                   shape: BoxShape.circle,
@@ -210,7 +224,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0, 20, 0, 0),
                                   child: Text(
                                     'Let\'s build The \nHistorical knowledge ',
@@ -233,8 +247,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20, 0, 20, 100),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            20, 0, 20, 100),
                                     child: Text(
                                       'Are you struggling study history or is that hard to understand? \n\nDon\'t worry you are in the perfect area. \nHere you can learn about the history without using books and it\'s easy to understand',
                                       textAlign: TextAlign.center,
@@ -260,22 +275,26 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height * 1,
                     decoration: BoxDecoration(
-                      color: Color(0xFF14181B),
+                      color: const Color(0xFF14181B),
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: Image.asset(
-                          'assets/images/124383.jpg',
+                          'assets/images/logo-color.png',
+                          errorBuilder: (context, a, b) {
+                            return const Icon(Icons.error);
+                          },
                         ).image,
                       ),
                     ),
                     child: Container(
                       width: 100,
                       height: MediaQuery.of(context).size.height * 1,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0x990F1113),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 9, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 9, 0, 0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -289,7 +308,14 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
                                   image: Image.asset(
-                                    'assets/images/ce1cfecaa092daecaa7a770daa5a4530.jpg',
+                                    'assets/images/logo-color.png',
+                                    errorBuilder: (context, a, b) {
+                                      return const Icon(Icons.error);
+                                    },
+                                    frameBuilder: (context, a, b, c) {
+                                      return const Icon(Icons.error);
+                                    },
+                                    semanticLabel: 'Image',
                                   ).image,
                                 ),
                                 borderRadius: BorderRadius.circular(50),
@@ -300,15 +326,16 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                               ),
                             ),
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 0, 0, 30),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 30, 0, 0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 30, 0, 0),
                                     child: Text(
                                       'Upgrade to Preamium \nfor more Good Deeds',
                                       textAlign: TextAlign.center,
@@ -325,8 +352,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                               ),
                             ),
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 100),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 0, 0, 100),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -349,24 +376,27 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                               ),
                             ),
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 70),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0, 0, 0, 70),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   FFButtonWidget(
                                     onPressed: () {
-                                      print('Button pressed ...');
+                                      if (kDebugMode) {
+                                        print('Button pressed ...');
+                                      }
                                     },
                                     text: 'Get In',
                                     options: FFButtonOptions(
                                       width: 240,
                                       height: 60,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 0, 0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0, 0, 0, 0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0, 0, 0, 0),
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
@@ -399,18 +429,17 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                 ],
               ),
               Align(
-                alignment: AlignmentDirectional(0, 1),
+                alignment: const AlignmentDirectional(0, 1),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 200),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 200),
                   child: smooth_page_indicator.SmoothPageIndicator(
-                    controller: pageViewController ??=
-                        PageController(initialPage: 0),
+                    controller: pageViewController,
                     count: 3,
                     axisDirection: Axis.horizontal,
                     onDotClicked: (i) async {
-                      await pageViewController!.animateToPage(
+                      await pageViewController.animateToPage(
                         i,
-                        duration: Duration(milliseconds: 500),
+                        duration: const Duration(milliseconds: 500),
                         curve: Curves.ease,
                       );
                     },
