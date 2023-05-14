@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:sample_app/splash/splash.dart';
 
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/internationalization.dart';
+import 'onboarding/onboarding_!.dart';
 
 void main() {
   runApp(const MyApp());
@@ -49,7 +49,7 @@ class MyAppState extends State<MyApp> {
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: _themeMode,
-      home: SplashWidget(),
+      home: OnboardingWidget(),
     );
   }
 }
